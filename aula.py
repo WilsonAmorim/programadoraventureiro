@@ -18,7 +18,7 @@ def main(page: ft.Page):
    page.window_max_height = 900
    page.window_min_height = 200
    page.window_width = 600
-   page.window_max_height = 9000
+   page.window_max_height = 800
    page.window_min_width = 200
    page.window_resizable = False
 
