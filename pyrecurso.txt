@@ -1,2 +1,4 @@
 pip install mysql-connector-python
 pip install ipykernel
+git config --global http.postBuffer 52428800
+.venv/Scripts/activate  

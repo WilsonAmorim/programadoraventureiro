@@ -4,4 +4,4 @@ def main(page: ft.Page):
    
     page.add()
     
-ft.app(target=main)
+ft.app(target=main, assets_dir='assets')
