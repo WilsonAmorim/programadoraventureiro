@@ -2,9 +2,9 @@ import flet as ft
     
 def main(page: ft.Page):
     btn1 = ft.IconButton(
-        icon=ft.icons.DELETE_FOREVER_ROUNDED,
+        icon=ft.DELETE_FOREVER_ROUNDED,
         icon_color=ft.colors.PINK,
-        icon_size=100,
+        icon_size=30,
         tooltip='Deletar ação',
     )
     
