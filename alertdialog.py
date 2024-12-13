@@ -1,37 +1,30 @@
 import flet as ft
-
-
+    
 def main(page: ft.Page):
-    page.title = "AlertDialog examples"
-    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    ad1 = ft.AlertDialog(
+      title=ft.Text(value='Aviso importante'),
+      content=ft.Text(value='Você está prestes a deletar os dados da sessão. Quer mesmo seguir?'),
+      content_padding=ft.padding.all(30),
+      inset_padding=ft.padding.all(10),
+      modal=False,
+      shape=ft.RoundedRectangleBorder(radius=5),
+      on_dismiss=lambda _: print('Fechei'),
 
-    dlg = ft.AlertDialog(
-        title=ft.Text("Hi, this is a non-modal dialog!"),
-        on_dismiss=lambda e: page.add(ft.Text("Non-modal dialog dismissed")),
+      actions=[
+         ft.TextButton(text='Cancelar', style=ft.ButtonStyle(color=ft.colors.RED)),
+         ft.TextButton(text='Salvar', style=ft.ButtonStyle(bgcolor=ft.colors.GREEN)),
+      ],
+      actions_alignment=ft.MainAxisAlignment.END,
     )
 
-    def handle_close(e):
-        page.close(dlg_modal)
-        page.add(ft.Text(f"Modal dialog closed with action: {e.control.text}"))
+    def open_ad(e):
+        page.dialog = ad1
+        ad1.open = True
+        page.update()
+    
+    btn1=ft.ElevatedButton(text='Abrir', on_click=open_ad)
 
-    dlg_modal = ft.AlertDialog(
-        modal=True,
-        title=ft.Text("Please confirm"),
-        content=ft.Text("Do you really want to delete all those files?"),
-        actions=[
-            ft.TextButton("Yes", on_click=handle_close),
-            ft.TextButton("No", on_click=handle_close),
-        ],
-        actions_alignment=ft.MainAxisAlignment.END,
-        on_dismiss=lambda e: page.add(
-            ft.Text("Modal dialog dismissed"),
-        ),
-    )
+    page.add(btn1)
 
-    page.add(
-        ft.ElevatedButton("Open dialog", on_click=lambda e: page.open(dlg)),
-        ft.ElevatedButton("Open modal dialog", on_click=lambda e: page.open(dlg_modal)),
-    )
-
-
-ft.app(main)
+if __name__ == '__main__':
+   ft.app(target=main, assets_dir='assets')

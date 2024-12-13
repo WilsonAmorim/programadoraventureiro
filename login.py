@@ -40,6 +40,6 @@ def main(page: ft.Page):
         ft.RangeSlider(min=0, max=100, start_value=10, end_value=50),
         ft.Divider(height=50),
     )
-
+    
 if __name__ == '__main__':
     ft.app(target=main, assets_dir='assets')
