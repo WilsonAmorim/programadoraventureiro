@@ -144,15 +144,15 @@ def LoginPage(page: ft.Page):
             spacing=10,
             alignment=ft.MainAxisAlignment.CENTER,
         ),
-        style=ft.ButtonStyle(
-            bgcolor={
-                ft.ControlState.DEFAULT: ft.colors.WHITE,
-                ft.ControlState.HOVERED: ft.colors.WHITE,
-            },
-            color={ft.ControlState.DEFAULT: ft.colors.BLACK},
-            elevation={"pressed": 0, "": 1},
-            shape=ft.RoundedRectangleBorder(radius=8),
-        ),
+        # style=ft.ButtonStyle(
+        #     bgcolor={
+        #         ft.ControlState.DEFAULT: ft.colors.WHITE,
+        #         ft.ControlState.HOVERED: ft.colors.WHITE,
+        #     },
+        #     color={ft.ControlState.DEFAULT: ft.colors.BLACK},
+        #     elevation={"pressed": 0, "": 1},
+        #     shape=ft.RoundedRectangleBorder(radius=8),
+        # ),
         on_click=login_with_google,
         width=280,
     )
@@ -169,15 +169,15 @@ def LoginPage(page: ft.Page):
             spacing=10,
             alignment=ft.MainAxisAlignment.CENTER,
         ),
-        style=ft.ButtonStyle(
-            bgcolor={
-                ft.ControlState.DEFAULT: ft.colors.WHITE,
-                ft.ControlState.HOVERED: ft.colors.WHITE,
-            },
-            color={ft.ControlState.DEFAULT: ft.colors.BLACK},
-            elevation={"pressed": 0, "": 1},
-            shape=ft.RoundedRectangleBorder(radius=8),
-        ),
+        # style=ft.ButtonStyle(
+        #     bgcolor={
+        #         ft.ControlState.DEFAULT: ft.colors.WHITE,
+        #         ft.ControlState.HOVERED: ft.colors.WHITE,
+        #     },
+        #     color={ft.ControlState.DEFAULT: ft.colors.BLACK},
+        #     elevation={"pressed": 0, "": 1},
+        #     shape=ft.RoundedRectangleBorder(radius=8),
+        # ),
         on_click=login_with_github,
         width=280,
     )
