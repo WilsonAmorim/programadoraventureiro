@@ -7,8 +7,8 @@ def main(page: ft.Page):
    page.horizontal_alignment = ft.CrossAxisAlignment.STRETCH
    page.vertical_alignment = ft.MainAxisAlignment.SPACE_AROUND
 
-   page.padding = 20
-   page.spacing = 10
+   # page.padding = 20
+   # page.spacing = 10
    page.title = 'PPE - PRIMEIRO EMPREGO'
    page.window_always_on_top = True
    page.window_title_bar_hidden = False
@@ -22,8 +22,9 @@ def main(page: ft.Page):
    page.window_min_width = 200
    page.window_resizable = True
    
-   page.window_top = 100
-   page.window_left = 100
+   # page.window_top = 100
+   # page.window_left = 100
+   page.window_center
    page.window_movable = True
    page.window_prevent_close = False
    page.window_progress_bar = 1

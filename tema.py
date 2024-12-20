@@ -23,6 +23,7 @@ def main(page: ft.Page):
                 ],
             ),
             bgcolor=ft.colors.PRIMARY,
+            expand=True,
         ),
 
     )

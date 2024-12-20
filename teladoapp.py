@@ -1,4 +1,5 @@
 import flet as ft
+import os
 
 def main(page: ft.Page):
   
@@ -11,7 +12,7 @@ def main(page: ft.Page):
    page.spacing = 10
    page.title = 'PPE - PRIMEIRO EMPREGO'
    # aplicativo fica em primeiro plano
-   page.window.always_on_top = True
+   # page.window.always_on_top = True
    # esconder a barra de titulo
    page.window.title_bar_hidden = False
    # some com os butões de minimizar maximinizar e fechar
